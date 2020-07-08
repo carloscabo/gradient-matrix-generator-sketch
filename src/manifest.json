@@ -1,0 +1,18 @@
+{
+  "$schema": "https://raw.githubusercontent.com/sketch-hq/SketchAPI/develop/docs/sketch-plugin-manifest-schema.json",
+  "icon": "icon.png",
+  "commands": [
+    {
+      "name": "my-command",
+      "identifier": "gradient-matrix-generator.my-command-identifier",
+      "script": "./my-command.js",
+      "shortcut": "cmd shift y"
+    }
+  ],
+  "menu": {
+    "title": "gradient-matrix-generator",
+    "items": [
+      "gradient-matrix-generator.my-command-identifier"
+    ]
+  }
+}
