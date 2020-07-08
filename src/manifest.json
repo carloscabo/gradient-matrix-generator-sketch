@@ -3,7 +3,7 @@
   "icon": "icon.png",
   "commands": [
     {
-      "name": "my-command",
+      "name": "Go! Go! Go!",
       "identifier": "gradient-matrix-generator.my-command-identifier",
       "script": "./my-command.js",
       "shortcut": "cmd shift y"

@@ -69,15 +69,50 @@ export default function () {
   // console.log(my_artboard);
 
   for (let i = 0; i < colors.length; i++) {
-    const color_row = colors[i];
     const swatch_y = i * (swatch.h + swatch.spacing);
+    const color_row = colors[i];
     for (let j = 0; j < colors.length; j++) {
-      const color_column = colors[j];
       const swatch_x = j * (swatch.w + swatch.spacing);
 
-      var my_style = new sketch.Style()
-      my_style.fills = [color_column];
+      const color_column = colors[j];
+      if (color_row == color_column) {
+        color_column = color_column + '00';
+      }
+
+      var Style = sketch.Style
+      var my_style = new Style()
+      //my_style.fills = [color_column];
       my_style.borders = [];
+      my_style.fills = [
+        {
+          fillType: Style.FillType.Gradient,
+          gradient: {
+            gradientType: Style.GradientType.Linear,
+            from: {
+              x: 0,
+              y: 1,
+            },
+            to: {
+              x: 1,
+              y: 0,
+            },
+            stops: [
+              {
+                position: 0,
+                color: color_row,
+              },
+              // {
+              //   position: 0.5,
+              //   color: '#0ff1ce',
+              // },
+              {
+                position: 1,
+                color: color_column,
+              },
+            ],
+          },
+        },
+      ];
 
       let my_square = new sketch.ShapePath({
         parent: my_artboard,
