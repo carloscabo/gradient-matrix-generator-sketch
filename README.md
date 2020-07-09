@@ -2,91 +2,26 @@
 
 ## Installation
 
-- [Download](../../releases/latest/download/gradient-matrix-generator.sketchplugin.zip) the latest release of the plugin
-- Un-zip
-- Double-click on gradient-matrix-generator.sketchplugin
-
-## Development Guide
-
-_This plugin was created using `skpm`. For a detailed explanation on how things work, checkout the [skpm Readme](https://github.com/skpm/skpm/blob/master/README.md)._
+Move the Gradient Matrix Generator plugin into your Plugins folder or double-click the .sketchplugin file.
 
 ### Usage
 
-Install the dependencies
+<img src="snapshot.png" style="width: 100%;" />
 
-```bash
-npm install
-```
+Watch the video below (1 minute long.)
 
-Once the installation is done, you can run some commands inside the project folder:
+1. Draw as many rectangles as many colors you want to combine.
+2. Fill them with the corresponding colors
+3. Place them OUTSIDE the artboard.
+4. Run the plugin the the menú option `🌈 Gradient matrix generator / Generate matrix from selection`
+5. You'll get a fresh artboard with the resulting gradients.
 
-```bash
-npm run build
-```
+You can take a look to the sample `test.sketch` file in this repository.
 
-To watch for changes:
+### Configuration and tweaks
 
-```bash
-npm run watch
-```
+- The spacing between the gradient's matrix elements will be the same as the spacing between the frist two selected elements in the selection.
+- The proportions of the resulting rectangles will be the same proportions of the first element in the selection.
+- You can get circles instead of squares / rectangles simply rounding the resulting shapes corners.
 
-Additionally, if you wish to run the plugin every time it is built:
-
-```bash
-npm run start
-```
-
-### Custom Configuration
-
-#### Babel
-
-To customize Babel, you have two options:
-
-- You may create a [`.babelrc`](https://babeljs.io/docs/usage/babelrc) file in your project's root directory. Any settings you define here will overwrite matching config-keys within skpm preset. For example, if you pass a "presets" object, it will replace & reset all Babel presets that skpm defaults to.
-
-- If you'd like to modify or add to the existing Babel config, you must use a `webpack.skpm.config.js` file. Visit the [Webpack](#webpack) section for more info.
-
-#### Webpack
-
-To customize webpack create `webpack.skpm.config.js` file which exports function that will change webpack's config.
-
-```js
-/**
- * Function that mutates original webpack config.
- * Supports asynchronous changes when promise is returned.
- *
- * @param {object} config - original webpack config.
- * @param {boolean} isPluginCommand - whether the config is for a plugin command or a resource
- **/
-module.exports = function(config, isPluginCommand) {
-  /** you can change config here **/
-}
-```
-
-### Debugging
-
-To view the output of your `console.log`, you have a few different options:
-
-- Use the [`sketch-dev-tools`](https://github.com/skpm/sketch-dev-tools)
-- Run `skpm log` in your Terminal, with the optional `-f` argument (`skpm log -f`) which causes `skpm log` to not stop when the end of logs is reached, but rather to wait for additional data to be appended to the input
-
-### Publishing your plugin
-
-```bash
-skpm publish <bump>
-```
-
-(where `bump` can be `patch`, `minor` or `major`)
-
-`skpm publish` will create a new release on your GitHub repository and create an appcast file in order for Sketch users to be notified of the update.
-
-You will need to specify a `repository` in the `package.json`:
-
-```diff
-...
-+ "repository" : {
-+   "type": "git",
-+   "url": "git+https://github.com/ORG/NAME.git"
-+  }
-...
-```
+### Configuration and tweaks
