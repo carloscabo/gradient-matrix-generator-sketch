@@ -26,4 +26,4 @@ You can take a look to the sample `test.sketch` file in this repository.
 
 ### Info & feedback
 
-This my very first Sketch plugin, don't expect superb-fancy-state-of-the-art coding. If you have any questions / suggestions you can find me at Twitter ((@putuko)[https://twitter.com/putuko]). This is an open source plugin so pull request and collaborations are welcome. Greetz.
+This my very first Sketch plugin, don't expect superb-fancy-state-of-the-art coding. If you have any questions / suggestions you can find me at Twitter ([@putuko](https://twitter.com/putuko)). This is an open source plugin so pull request and collaborations are welcome. Greetz.
