@@ -2,7 +2,9 @@
 
 ## Installation
 
-Move the **Gradient Matrix Generator plugin** into your Sketch Plugins folder or double-click the `.sketchplugin` file.
+[Download the latest release of the plugin](../../releases/latest/download/gradient-matrix-generator.sketchplugin.zip) 
+- Un-zip
+- Double-click on gradient-matrix-generator.sketchplugin
 
 ### Usage
 
