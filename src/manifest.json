@@ -5,9 +5,10 @@
   "homepage": "https://github.com/carloscabo/gradient-matrix-generator",
   "description": "Generates a gradient matrix from a selection of color filled rectangles",
   "icon": "icon.png",
+  "version": "0.1",
   "commands": [
     {
-      "name": "Generate matrix",
+      "name": "Generate matrix from selection",
       "identifier": "gradient-matrix-generator.generate-matrix",
       "script": "./generate-matrix.js"
     }
