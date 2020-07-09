@@ -1,18 +1,21 @@
 {
   "$schema": "https://raw.githubusercontent.com/sketch-hq/SketchAPI/develop/docs/sketch-plugin-manifest-schema.json",
+  "name": "Gradient matrix generator",
+  "author": "Carlos Cabo (@putuko)",
+  "homepage": "https://github.com/carloscabo/gradient-matrix-generator",
+  "description": "Generates a gradient matrix from a selection of color filled rectangles",
   "icon": "icon.png",
   "commands": [
     {
-      "name": "Go! Go! Go!",
-      "identifier": "gradient-matrix-generator.my-command-identifier",
-      "script": "./my-command.js",
-      "shortcut": "cmd shift y"
+      "name": "Generate matrix",
+      "identifier": "gradient-matrix-generator.generate-matrix",
+      "script": "./generate-matrix.js"
     }
   ],
   "menu": {
-    "title": "gradient-matrix-generator",
+    "title": "🌈 Gradient matrix generator",
     "items": [
-      "gradient-matrix-generator.my-command-identifier"
+      "gradient-matrix-generator.generate-matrix"
     ]
   }
 }

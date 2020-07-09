@@ -5,15 +5,17 @@ const { randomEmoji } = require('./shared');
 
 export default function () {
   const doc = sketch.getSelectedDocument()
+  const page = doc.selectedPage;
+  const Style = sketch.Style;
+
   var selected_layers = doc.selectedLayers;
   var selected_count = selected_layers.length;
-  const page = doc.selectedPage;
 
   if (selected_count === 0) {
-    sketch.UI.message(`No layers are selected.${randomEmoji()}`);
+    sketch.UI.message(`⚠️ No layers are selected!.`);
     throw '';
   } else if (selected_count < 2) {
-    sketch.UI.message(`You need at least 2 color filed layers!`);
+    sketch.UI.message(`⚠️ You need at least 2 color filed layers!`);
     throw '';
   }
 
@@ -34,7 +36,6 @@ export default function () {
   };
   const swatches = [];
 
-  // const colors = ['#1458EA', '#1CE1AC', '#ff7d50', '#ff007f', '#8338EC', '#FFBE0B'];
   let colors = [];
 
   layers.forEach(function (layer, i) {
@@ -71,6 +72,7 @@ export default function () {
   for (let i = 0; i < colors.length; i++) {
     const swatch_y = i * (swatch.h + swatch.spacing);
     const color_row = colors[i];
+
     for (let j = 0; j < colors.length; j++) {
       const swatch_x = j * (swatch.w + swatch.spacing);
 
@@ -79,8 +81,7 @@ export default function () {
         color_column = color_column + '00';
       }
 
-      var Style = sketch.Style
-      var my_style = new Style()
+      let my_style = new Style()
       //my_style.fills = [color_column];
       my_style.borders = [];
       my_style.fills = [
@@ -123,14 +124,4 @@ export default function () {
       swatches.push(my_square);
     }
   }
-
-
-
-  /*
-  if (selected_count === 0) {
-    sketch.UI.message(`No layers are selected.${randomEmoji()}`);
-  } else {
-    sketch.UI.message(`${selected_count} layers selected.`);
-  }
-  */
 }
