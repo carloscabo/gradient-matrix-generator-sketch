@@ -1,4 +1,4 @@
-# gradient-matrix-generator
+# Gradient matrix generator
 
 ## Installation
 
