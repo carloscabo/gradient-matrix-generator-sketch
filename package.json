@@ -1,10 +1,20 @@
 {
   "name": "gradient-matrix-generator",
-  "description": "Plugin that generates a matrix of gradient combinations from a selection of colors",
   "version": "0.1.0",
+  "description": "Plugin that generates a matrix of gradient combinations from a selection of colors",
+  "private": false,
+  "keywords": [
+    "sketch",
+    "gradient",
+    "UI Kit",
+    "UI"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/carloscabo/gradient-matrix-generator-sketch"
+  },
+  "bugs": {
+    "url": "https://github.com/carloscabo/gradient-matrix-generator-sketch/issues"
   },
   "engines": {
     "sketch": ">=53.0"
@@ -27,5 +37,6 @@
   "devDependencies": {
     "@skpm/builder": "^0.7.0"
   },
-  "author": "CarlosCabo (@putuko) <carloscabo AT gmail DOT com>"
+  "author": "CarlosCabo (@putuko) <carloscabo AT gmail DOT com>",
+  "license": "MIT"
 }
