@@ -2,8 +2,8 @@
   "$schema": "https://raw.githubusercontent.com/sketch-hq/SketchAPI/develop/docs/sketch-plugin-manifest-schema.json",
   "name": "Gradient matrix generator",
   "author": "Carlos Cabo (@putuko)",
-  "homepage": "https://github.com/carloscabo/gradient-matrix-generator",
-  "description": "Generates a gradient matrix from a selection of color filled rectangles",
+  "homepage": "https://github.com/carloscabo/gradient-matrix-generator-sketch",
+  "description": "Plugin that generates a matrix of gradient combinations from a selection of colors",
   "icon": "icon.png",
   "version": "0.1",
   "commands": [
