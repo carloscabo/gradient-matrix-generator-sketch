@@ -1,6 +1,6 @@
 {
   "name": "gradient-matrix-generator",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Plugin that generates a matrix of gradient combinations from a selection of colors",
   "private": false,
   "keywords": [
