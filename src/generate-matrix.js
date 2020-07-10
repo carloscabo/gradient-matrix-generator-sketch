@@ -48,7 +48,7 @@ export default function () {
   // Get base positions and colors from layers
   const colors = [];
   layers.forEach(function (layer, i) {
-    // console.log((i + 1) + '. ' + layer.style.fills[0].color);
+    // console.log(layer.style.fills[0].color);
     colors.push(layer.style.fills[0].color);
 
     if (i == 0) {
@@ -83,8 +83,11 @@ export default function () {
       const swatch_x = j * (swatch.w + swatch.spacing);
 
       const color_column = colors[j];
+
+      // If they are the same color set alpha to 00 on the second one
       if (color_row == color_column) {
-        color_column = color_column + '00';
+        color_column = color_column.substring(0, color_column.length - 2) + '00';
+        // console.log(color_column);
       }
 
       let my_style = new Style()
